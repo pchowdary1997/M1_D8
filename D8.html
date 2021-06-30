@@ -6,7 +6,8 @@
       */
 
       const changeTitle = function (newTitle) {
-        //
+       document.title = newTitle
+
       };
 
       /* EXERCISE 2
@@ -14,7 +15,8 @@
       */
 
       const addClassToTitle = function () {
-        //
+        let myHeading = document.getElementsByTagName("h1")[0]
+        myHeading.classList.add("myHeading")
       };
 
       /* EXERCISE 3
@@ -22,7 +24,8 @@
       */
 
       const changePcontent = function () {
-        //
+        let newPcontent = document.querySelector("div p")
+        newPcontent.innerText = "Changing new Text"
       };
 
       /* EXERCISE 4
@@ -30,7 +33,8 @@
       */
 
       const changeUrls = function () {
-        //
+        let newlink =document.getElementsByTagName("a")[0]
+        newlink.setAttribute("href","https://www.google.com")
       };
 
       /* EXERCISE 5
@@ -38,7 +42,10 @@
        */
 
       const addToTheSecond = function (content) {
-        //
+        let secondList = document.getElementById("secondList")
+        let addingNewElement = document.createElement("li")
+        addingNewElement.innerText=content
+        secondList.appendChild(addingNewElement)
       };
 
       /* EXERCISE 6
@@ -93,7 +100,13 @@
       */
 
       window.onload = function () {
-        //
+        addClassToTitle()
+        changeTitle("change Tittle")
+        changePcontent()
+        changeUrls()
+        addToTheSecond()
+
+      
       };
 
       /* EXERCISE 13
